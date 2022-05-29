@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    display: block;
+}
+
+/*                   HEADER */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+
+.header2 {
+    min-height: 20vh;
+    width: 100%;
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 3%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 300px;
+}
+
+/* Hvis der skal være extra ting i menuen. */
+.nav-link {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 9px 45px;
+    position: relative;
+}
+
+.nav-link ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 180%;
+}
+
+.nav-link ul li ::after{ /* Gør så det forandre sig når man tager musen over. */
+    content: '';
+    width: 0%;
+    height: 6px;
+    background: #0497aa;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li :hover::after {
+    width: 100%;
+    height: 4px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+img {
+    margin: auto;
+    width: 300px;
+}
+
+/*                      BODY */
+
+.midtCol { /* Midten af skærmen. Text */
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 200%;
+    color: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.midtCol2 { /* Midten af skærmen på datareg. Text */
+    padding: 2% 9%;
+    font-size: 150%;
+    color: black;
+    position: center;
+}
+
+.midtCol p{
+    margin: 25px 0px 0px 0px; /* Første px er fra toppen, de 2 i midten er left og right, og den sidste px er fra bunden  */
+}
+
+button1 { /* Log ind knappen på forsiden */
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 70%;
+    background: transparent;
+    position: relative;
+    color: black;
+    cursor: pointer;
+}
+
+button1:hover { /* Den her gør så log ind knappen skifter farve når man tager musen over */
+    background: #0497aa;
+    border: transparent;
+    padding: 14px;
+}
+
+button2 {
+    margin: 8px 0;
+    border: 2px solid;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 15px;
+    background: #0497aa;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+
+.cover {
+    background: rgba(0, 13, 63, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*                      FOOTER                  */
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    padding-left: 30px;
+    width: 100%;
+    height: 100px;
+    background: #0497aa;
+}
+
+/* Dette er log ind formen*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+
+
+.container {
+    padding: 15px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Gør så den er gemt før man trykker */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Gør så pop op formen ligger øverst */
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% fra toppen, 15% fra bunden og centrum */
+    width: fit-content;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Luk knappen (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Zoom animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Gør udseendet anderledes for mindre skærme */
+@media screen and (max-width: 700px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    /* .nav-link {
+        position: absolute;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    } */
+}
