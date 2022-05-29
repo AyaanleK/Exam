@@ -7,61 +7,60 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../static/static/page1.css"
-          th:href="@{/styles/page1.css}"/>
+    <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
 </head>
+
+<!-- vedværende Header -->
+<header>
+    <section class="header">
+        <nav> <!-- Husk at lave det om til "/Billeder/BILABONNEMENT_LOGO.png" eller virker det ikke på lokalhost -->
+            <a href="index.html"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="">Forretningsudvikler</a></li>
+                    <li><a href="">Skade & Udbedring</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</header>
+<!-- vedværende Header -->
+
 <body>
-
-
-
 <div class="container">
-
-
-
         <h2>Car Registration </h2>
     <hr/>
-
-
 <form th:action="@{/addCar}" th:object="${carAdded}" method="post">
-
 
                     <input type="text"
                    th:field="*{car_chassis_number}"
-                   placeholder="Indtast car chassis number"
+                   placeholder="Indtast stelnummer"
                    class="form-control col-4 mb-4"
-                     />
+                    />
 
                     <input type="text"
                            th:field="*{car_color}"
-                           placeholder="Indtast car color"
+                           placeholder="Indtast farve på bilen"
                            class="form-control col-4 mb-4"
                     />
-
-
-
 
                     <input type="text"
                            th:field="*{car_model}"
-                           placeholder="Indtast car model"
+                           placeholder="Indtast bil model"
                            class="form-control col-4 mb-4"
                     />
 
-
                     <input type="text"
                            th:field="*{car_registration_fee}"
-                           placeholder="Indtast car registration fee"
+                           placeholder="Indtast samlet pris"
                            class="form-control col-4 mb-4"
                     />
 
         <button class="btn btn-primary"
-                type="submit"> Save</button>
+                type="submit"> Gem </button>
     </form>
-
     <hr/>
-    <a th:href="@{/list}">back to home</a>
-
-
+    <a th:href="@{/list}">Tilbage til start</a>
 </div>
-
 </body>
 </html>

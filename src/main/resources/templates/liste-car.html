@@ -7,57 +7,50 @@
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../static/static/page1.css"
-          th:href="@{/styles/page1.css}"/>
+    <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
 </head>
+
+<!-- vedværende Header -->
+<header>
+    <section class="header">
+        <nav><!-- Husk at lave det om til "/Billeder/BILABONNEMENT_LOGO.png" eller virker det ikke på lokalhost -->
+            <a href="index.html"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="">Forretningsudvikler</a></li>
+                    <li><a href="">Skade & Udbedring</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+</header>
+<!-- vedværende Header -->
+
 <body>
 
-
-
 <div class="container ">
-
-    <h2>Car list </h2>
+    <h2> Nuværende Abonnement-Aftaler </h2>
     <hr/>
-
-    <a th:href="@{/addCarForm}" class="btn btn-primary mb-2">Add New Car</a>
-
+    <a th:href="@{/addCarForm}" class="btn btn-primary mb-2">Tilføj ny aftale</a>
     <table class="table table-bordered table-striped ">
-
         <thead>
         <tr>
-
-
-            <th>Chassis number</th>
-            <th>Car color</th>
-            <th>Car model</th>
-            <th>Fee</th>
-
-
+            <th>Stelnummer</th>
+            <th>Farve</th>
+            <th>Bil model</th>
+            <th>Pris</th>
         </tr>
         </thead>
 
         <tbody>
         <tr th:each="the_car: ${car}">
-
-
-
-
             <td th:text="${the_car.car_chassis_number}"></td>
             <td th:text="${the_car.car_color}"></td>
             <td th:text="${the_car.car_model}"></td>
             <td th:text="${the_car.car_registration_fee}"></td>
-
-
-
-
         </tr>
         </tbody>
     </table>
-
-
-
 </div>
-
 </body>
-
 </html>
