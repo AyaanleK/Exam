@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/styles/page1.css"
+          th:href="@{/styles/page1.css}"/>
+</head>
+<body>
+
+
+
+<div class="container">
+
+
+
+    <h2>Dommage Registration </h2>
+    <hr/>
+
+
+    <form th:action="@{/addDommage}" th:object="${dommageAdded}" method="post">
+
+
+        <input type="text"
+               th:field="*{dommage_id}"
+               placeholder="Indtast dommage id"
+               class="form-control col-4 mb-4"
+        />
+
+        <input type="text"
+               th:field="*{dommage_date}"
+               placeholder="Indtast dommage date"
+               class="form-control col-4 mb-4"
+        />
+
+
+
+
+        <input type="text"
+               th:field="*{dommage_description}"
+               placeholder="Indtast dommage description"
+               class="form-control col-4 mb-4"
+        />
+
+
+        <input type="text"
+               th:field="*{dommage_chassisNumber}"
+               placeholder="Indtast dommaged car chassis number"
+               class="form-control col-4 mb-4"
+        />
+
+        <input type="text"
+               th:field="*{dommage_total_cost}"
+               placeholder="Indtast dommage total cost"
+               class="form-control col-4 mb-4"
+        />
+
+        <button class="btn btn-primary"
+                type="submit"> Save</button>
+    </form>
+
+    <hr/>
+    <a th:href="@{/list_car}">back to home</a>
+
+
+</div>
+
+</body>
+</html>

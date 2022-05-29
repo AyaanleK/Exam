@@ -1,7 +1,6 @@
 package com.koukou.keaexam.controller;
 
 import com.koukou.keaexam.model.CarModel;
-import com.koukou.keaexam.repository.CarRepository;
 import com.koukou.keaexam.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,12 +18,12 @@ public class CarController {
   private CarService carService;
 
 
-  @GetMapping({"/","/list","/liste-car"})
+  @GetMapping({"/list_car","/liste-car"})
   public ModelAndView showCarList(){
 
-    ModelAndView mav = new ModelAndView("liste-car");
+    ModelAndView mav = new ModelAndView("list-car");
     List<CarModel> carList = carService.showAllCars();
-    mav.addObject("car", carList);
+    mav.addObject("leCar", carList);
 
     return mav;
   }
@@ -44,9 +43,9 @@ public class CarController {
 
 
   @PostMapping({"/addCar", "/newCar"})
-  public String  addCar(@ModelAttribute CarModel car){
+  public String  addCar(@ModelAttribute CarModel mycar){
 
-    carService.addCar(car);
+    carService.addCar(mycar);
 
 
     return "redirect:/liste-car";
