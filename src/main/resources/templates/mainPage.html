@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="with=device-width, initialscale=1.0">
     <title>Homepage</title>
+    <link rel="stylesheet" th:href="@{/style.css}" href="../static/Billeder">
     <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
     <title>Maine Page</title>
+
 </head>
 
 <header>
 <section class="header2">
     <!-- vedværende Header -->
     <nav>
-        <a href="index.html"><img src="../static/Billeder/BILABONNEMENT_LOGO.png"></a>
+        <a th:href="@{/}"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
+
         <div class="nav-link">
             <ul>
-                <li><a href="">Forretningsudvikler</a></li>
-                <li><a href="">Dataregistrering</a></li>
-                <li><a href="">Skade & Udbedring</a></li>
+                <li> <a th:href="@{/forretning}" class="nav-link" href="#" >Forretningsudvikler</a> </li>
+                <li> <a th:href="@{/data}" class="nav-link active" href="#" >Dataregistrering</a> </li>
+                <li> <a th:href="@{/skade}" class="nav-link" href="#"  >Skade & Udbedring</a> </li>
             </ul>
         </div>
     </nav>
@@ -35,15 +38,4 @@
 
 </body>
 
-<!-- vedværende Footer -->
-<footer class="footer">
-    <h4>Kontakt</h4>
-    <ul>
-        <li>Tel: +45 12345678</li>
-        <li>Adresse: Kea 112 </li>
-        <li>Email: bil@bil.dk</li>
-        <li>CVR nr 12 12 12 12</li>
-    </ul>
-</footer>
-<!-- vedværende Footer -->
 </html>

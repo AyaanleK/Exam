@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
@@ -14,11 +15,11 @@
 <header>
     <section class="header">
         <nav><!-- Husk at lave det om til "/Billeder/BILABONNEMENT_LOGO.png" eller virker det ikke på lokalhost -->
-            <a href="index.html"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
+            <a th:href="@{/}"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
             <div class="nav-link">
                 <ul>
-                    <li><a th:href="">Forretningsudvikler</a></li>
-                    <li><a href="index.html">Skade & Udbedring</a></li>
+                    <li><a>Forretningsudvikler</a></li>
+                    <li><a>Skade & Udbedring</a></li>
                 </ul>
             </div>
         </nav>
