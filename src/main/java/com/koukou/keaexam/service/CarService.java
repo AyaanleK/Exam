@@ -11,16 +11,13 @@ public class CarService {
 
   private CarRepository carRepository;
 
-
   public CarService(CarRepository carRepository) {
     this.carRepository = carRepository;
   }
 
-
   public List<CarModel> showAllCars(){
     return carRepository.getAllCars();
   }
-
 
   public void addCar(CarModel car) {
     carRepository.addCar(car);

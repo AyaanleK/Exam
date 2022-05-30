@@ -13,15 +13,12 @@ public class CarRepository {
 
   private Connection connection;
 
-
   public CarRepository() {
     connection = ConnectorManager.getConnection();
   }
 
   public List<CarModel> getAllCars(){
-
     connection = ConnectorManager.getConnection();
-
 
     List<CarModel> car = new ArrayList<>();
     final String QUERY = "SELECT * FROM car";
@@ -36,19 +33,16 @@ public class CarRepository {
         String car_model = resultSet.getString(3);
         String car_registration_fee = resultSet.getString(4);
 
-
-
-
         car.add(new CarModel(car_chassis_number, car_color, car_model,
             car_registration_fee));
       }
-      System.out.println("can show all cars");
+      System.out.println("Kan vise alle biler");
 
       statement.close();
 
     }
     catch (SQLException e){
-      System.out.println(e + "can not show all cars");
+      System.out.println("Kan ikke forbinde" + e);
       e.printStackTrace();
     }
     return car;
@@ -79,6 +73,4 @@ public class CarRepository {
       e.printStackTrace();
     }
   }
-
-
 }

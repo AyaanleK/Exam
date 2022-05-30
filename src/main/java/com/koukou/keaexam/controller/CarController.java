@@ -18,7 +18,7 @@ public class CarController {        // Dette er Dataregistrering Controller.
   private CarService carService;
 
 
-  @GetMapping({"/","/list","/liste-car"})
+  @GetMapping({"/list","/liste-car"})
   public ModelAndView showCarList(){
 
     ModelAndView mav = new ModelAndView("liste-car");
