@@ -41,7 +41,19 @@ nav img {
     text-align: right;
 }
 
+.nav-link2 { /* Dette er nav på startsiden. */
+    flex: 1;
+    text-align: center;
+}
+
 .nav-link ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 9px 45px;
+    position: relative;
+}
+
+.nav-link2 ul li { /* Dette er nav på startsiden. */
     list-style: none;
     display: inline-block;
     padding: 9px 45px;
@@ -54,7 +66,23 @@ nav img {
     font-size: 180%;
 }
 
+.nav-link2 ul li a{ /* Dette er nav på startsiden. */
+    color: black;
+    text-decoration: none;
+    font-size: 180%;
+}
+
 .nav-link ul li ::after{ /* Gør så det forandre sig når man tager musen over. */
+    content: '';
+    width: 0%;
+    height: 6px;
+    background: #0497aa;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link2 ul li ::after{ /* Gør så det forandre sig når man tager musen over. */ /* Dette er nav på startsiden. */
     content: '';
     width: 0%;
     height: 6px;
@@ -71,15 +99,29 @@ nav img {
     border-radius: 5px;
 }
 
+.nav-link2 ul li :hover::after { /* Dette er nav på startsiden. */
+    width: 100%;
+    height: 4px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
 img {
     margin: auto;
     width: 300px;
 }
 
+.homepageimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 650px;
+}
+
 /*                      BODY */
 
 .midtCol { /* Midten af skærmen. Text */
-    top: 50%;
+    top: 60%;
     left: 50%;
     width: 90%;
     font-size: 200%;

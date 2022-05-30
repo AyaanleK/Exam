@@ -7,11 +7,19 @@
     <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
 </head>
 
+                        <!--        Dette er startsiden         -->
+
     <!-- vedværende Header -->
 <header>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
+            <div class="nav-link2">
+                <ul>
+                    <li><a href="add-car-form.html">Dataregistrering</a></li>
+                    <li><a href="forretningsudvikler.html">Forretningsudvikler</a></li>
+                    <li><a href="skadeUdbedring.html">Skade & Udbedring</a></li>
+                </ul>
+            </div>
         </nav>
     </section>
 </header>
@@ -19,13 +27,16 @@
 
 <body>
 
+<div>
+    <img src="Billeder/BILABONNEMENT_LOGO.png" class="homepageimg"></a>
+</div>
+
 <div class="midtCol">
     <p><h1>Velkommen.</h1>
-    <br>
-    <h4>Tryk venligst log-ind knappen.
-        <br>Derefter benyt den bruger som du har fået tildelt</h4></p>
-    <img src="/Billeder/bil1.png" height="189" width="267">
+        <br><h3>Vælg venligst den menu du skal ind i, øverst på skærmen.</h3></p>
+</div>
 
+    <!--
     <div class="col-1">
         <button1 onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Log ind</button1>
     </div>
@@ -50,11 +61,6 @@
                 <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
         </div>
-
-        <!-- <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Glemt <a href="#">password?</a></span>
-        </div> -->
     </form>
 </div>
 
@@ -69,6 +75,7 @@
         }
     }
 </script>
+-->
 
 </body>
 

@@ -1,7 +1,6 @@
 package com.koukou.keaexam.controller;
 
 import com.koukou.keaexam.model.CarModel;
-import com.koukou.keaexam.repository.CarRepository;
 import com.koukou.keaexam.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-public class CarController {
+public class CarController {        // Dette er Dataregistrering Controller.
 
   @Autowired
   private CarService carService;
