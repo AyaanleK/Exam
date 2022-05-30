@@ -44,7 +44,12 @@
         </thead>
 
         <tbody>
-        <tr th:each="the_car: ${car}">
+
+        <tr th:each="the_car: ${leCar}">
+
+
+
+
             <td th:text="${the_car.car_chassis_number}"></td>
             <td th:text="${the_car.car_color}"></td>
             <td th:text="${the_car.car_model}"></td>

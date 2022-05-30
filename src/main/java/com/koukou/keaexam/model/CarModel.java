@@ -20,6 +20,9 @@ public class CarModel {
 
   }
 
+  public CarModel(int car_dommage_id, String car_dommage_date, String car_dommage_description,
+                  int dommage_total_cost, int car_dommage_chassisNumber) {
+  }
 
 
   public String getCar_chassis_number() {
