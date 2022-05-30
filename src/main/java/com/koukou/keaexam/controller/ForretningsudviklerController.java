@@ -15,13 +15,15 @@ public class ForretningsudviklerController {
     @Autowired
     private ForretningsudviklerService forretningsudviklerService;
 
-    @GetMapping("/forretningsudvikler")
+    @GetMapping({"/forretning", "/forretningsudvikler"})
     public ModelAndView showTotalPrisOgAbonnementer(){
+
     ModelAndView mav = new ModelAndView("forretningsudvikler");
-        List<ForretningsudviklerModel> forretningsudviklerList1 = forretningsudviklerService.showTotalPris();
-        List<ForretningsudviklerModel> forretningsudviklerList2 = forretningsudviklerService.showTotalAbonnementer();
-        mav.addObject("forretningsU", forretningsudviklerList1);
-        mav.addObject("forretningsU", forretningsudviklerList2);
+        List<ForretningsudviklerModel> forretningsudviklerList1 = forretningsudviklerService.showTotalAbonnementer();
+        List<ForretningsudviklerModel> forretningsudviklerList2 = forretningsudviklerService.showTotalPris();
+        mav.addObject("forretningsU1", forretningsudviklerList1);
+        mav.addObject("forretningsU2", forretningsudviklerList2);
+
     return mav;
     }
 }

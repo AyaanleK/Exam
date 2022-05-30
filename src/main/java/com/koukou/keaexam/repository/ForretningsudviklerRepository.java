@@ -23,8 +23,8 @@ public class ForretningsudviklerRepository {
     public List<ForretningsudviklerModel> getTotalPris() {
         connection = ConnectorManager.getConnection();
 
-        List<ForretningsudviklerModel> forretmodel = new ArrayList<>();
-        final String QUERY = "SELECT SUM(pris) as total_pris FROM car";
+        List<ForretningsudviklerModel> forretningsU2 = new ArrayList<>();
+        final String QUERY = "SELECT SUM(car_registration_fee) as total_pris FROM car";
 
         try {
             Statement statement = connection.createStatement();
@@ -33,7 +33,7 @@ public class ForretningsudviklerRepository {
 
                 String total_pris = resultSet.getString(1);
 
-                forretmodel.add(new ForretningsudviklerModel(total_pris));
+                forretningsU2.add(new ForretningsudviklerModel(total_pris));
             }
             System.out.println("Kan vise total pris og alle abonnementer.");
             statement.close();
@@ -41,13 +41,13 @@ public class ForretningsudviklerRepository {
             System.out.println("Kan ikke forbinde" + e);
             e.printStackTrace();
         }
-        return forretmodel;
+        return forretningsU2;
     }
 
     public List<ForretningsudviklerModel> getTotalAbonnementer() {
         connection = ConnectorManager.getConnection();
 
-        List<ForretningsudviklerModel> forretmodel = new ArrayList<>();
+        List<ForretningsudviklerModel> forretningsU1 = new ArrayList<>();
         final String QUERY = "SELECT COUNT(*) as total_abonnementer FROM car";
 
         try {
@@ -55,9 +55,9 @@ public class ForretningsudviklerRepository {
             ResultSet resultSet = statement.executeQuery(QUERY);
             while (resultSet.next()) {
 
-                String totale_abonnementer = resultSet.getString(2);
+                String total_abonnementer = resultSet.getString(1);
 
-                forretmodel.add(new ForretningsudviklerModel(totale_abonnementer));
+                forretningsU1.add(new ForretningsudviklerModel(total_abonnementer));
             }
             System.out.println("Kan vise total pris og alle abonnementer.");
             statement.close();
@@ -65,6 +65,6 @@ public class ForretningsudviklerRepository {
             System.out.println("Kan ikke forbinde" + e);
             e.printStackTrace();
         }
-        return forretmodel;
+        return forretningsU1;
     }
 }

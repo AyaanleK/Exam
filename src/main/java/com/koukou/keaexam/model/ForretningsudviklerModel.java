@@ -5,9 +5,9 @@ public class ForretningsudviklerModel {
     private String total_pris;
     private String total_abonnementer;
 
-    public ForretningsudviklerModel(String total_pris, String totale_abonnementer) {
+    public ForretningsudviklerModel(String total_pris, String total_abonnementer) {
         this.total_pris = total_pris;
-        this.total_abonnementer = totale_abonnementer;
+        this.total_abonnementer = total_abonnementer;
     }
 
     public ForretningsudviklerModel(String total_pris) {
@@ -33,7 +33,7 @@ public class ForretningsudviklerModel {
     public String toString() {
         return "ForretningsudviklerModel{" +
                 "total_pris='" + total_pris + '\'' +
-                ", totale_abonnementer='" + total_abonnementer + '\'' +
+                ", total_abonnementer='" + total_abonnementer + '\'' +
                 '}';
     }
 }

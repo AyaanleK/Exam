@@ -20,8 +20,6 @@ public class CarModel {
 
   }
 
-
-
   public String getCar_chassis_number() {
     return car_chassis_number;
   }
@@ -53,8 +51,6 @@ public class CarModel {
   public void setCar_registration_fee(String car_registration_fee) {
     this.car_registration_fee = car_registration_fee;
   }
-
-
 
   @Override
   public String toString() {

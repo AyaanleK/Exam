@@ -14,10 +14,10 @@
 <header>
     <section class="header">
         <nav> <!-- Husk at lave det om til "/Billeder/BILABONNEMENT_LOGO.png" eller virker det ikke på lokalhost -->
-            <a href="index.html"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
+            <a href="index.html"><a th:href="@{/index}"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
             <div class="nav-link">
                 <ul>
-                    <li><a href="forretningsudvikler.html">Forretningsudvikler</a></li>
+                    <li><a href="forretningsudvikler.html"><a th:href="@{/forretningsudvikler}">Forretningsudvikler</a></li>
                     <li><a href="skadeUdbedring.html">Skade & Udbedring</a></li>
                 </ul>
             </div>
