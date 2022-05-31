@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add Dammage</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../static/styles/page1.css"
-          th:href="@{/styles/page1.css}"/>
+    <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
 </head>
 
 <!-- vedværende Header -->
@@ -81,7 +81,7 @@
     </form>
 
     <hr/>
-    <a th:href="@{/mainPage}">back to home</a>
+    <a th:href="@{/skade}">back</a>
 
 
 
