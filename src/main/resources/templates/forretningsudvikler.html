@@ -1,38 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
-    <meta name="viewport" content="with=device-width, initialscale=1.0">
-
-    <title>Forretnings Udvikling</title>
-
+    <meta charset="UTF-8">
+    <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
+    <title>Maine Page</title>
 </head>
 
+<!-- vedværende Header -->
 <header>
     <section class="header2">
-        <!-- vedværende Header -->
         <nav>
-            <a th:href="@{/}"><img src="Billeder/BILABONNEMENT_LOGO.png"></a>
-
+            <a href="index.html"><a th:href="@{/index}"><img src="../static/Billeder/BILABONNEMENT_LOGO.png"></a>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href=""><a th:href="@{/}">Dataregistrering</a></li>
+                        <li><a href=""><a th:href="@{/}">Skade & Udbedring</a></li>
+                    </ul>
+                </div>
         </nav>
-        <!-- vedværende Header -->
-
     </section>
-
 </header>
+<!-- vedværende Header -->
+
 <body>
 
-<div class="midtCol">
-    <p><h1>Velkommen til Forretnings udvikling.</h1>
-    <br>
-    <h4> Vælg venligst her ned den menu du vil ind på </h4></p>
+<div class="container">
+    <h2> Alle udlejede biler samt den totale pris på alle abonnementer: </h2>
+    <hr/>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>Antallet på udlejede biler.</th>
+            <th>Den sammenlagte pris på nuværende udlejede biler.</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr th:each="the_forretningsudvikler:${forretningsU1}">
+            <td th:text="${the_forretningsudvikler.total_abonnementer}"></td>
+        </tr>
+        <tr th:each="the_forretningsudvikler:${forretningsU2}">
+            <td th:text="${the_forretningsudvikler.total_pris}"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 
 </body>
-
 </html>
