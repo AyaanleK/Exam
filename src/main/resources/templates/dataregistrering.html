@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
     <meta name="viewport" content="with=device-width, initialscale=1.0">
-
-    <title>Homepage</title>
+    <title>Dataregistrering</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
           integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
           crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" th:href="@{/style.css}" href="../static/style.css">
-
-    <title>Data Registraring</title>
 </head>
 
 <!-- vedværende Header -->
 <header>
     <section class="header2">
         <nav>
-            <a href="index.html"><a th:href="@{/index}"><img src="../static/Billeder/BILABONNEMENT_LOGO.png"></a>
+            <a href="index.html"><a th:href="@{/}"><img src="Billeder/BILABONNEMENT_LOGO.png">
                 <div class="nav-link">
                     <ul>
-                        <li><a href=""><a th:href="@{/}">Forretningsudvikler</a></li>
-                        <li><a href=""><a th:href="@{/}">Skade & Udbedring</a></li>
+                        <li><a href=""><a th:href="@{/forretning}">Forretningsudvikler</a></li>
+                        <li><a href=""><a th:href="@{/skade}">Skade & Udbedring</a></li>
                     </ul>
                 </div>
         </nav>
