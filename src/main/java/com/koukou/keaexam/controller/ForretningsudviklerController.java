@@ -15,7 +15,7 @@ public class ForretningsudviklerController {
     @Autowired
     private ForretningsudviklerService forretningsudviklerService;
 
-    @GetMapping({"/forretning", "/forretningsudvikler"})
+    @GetMapping({"/forretningsudvikler"})
     public ModelAndView showTotalPrisOgAbonnementer(){
 
         ModelAndView mav = new ModelAndView("forretningsudvikler");
