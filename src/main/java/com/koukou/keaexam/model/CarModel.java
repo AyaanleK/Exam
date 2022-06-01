@@ -30,10 +30,11 @@ public class CarModel {
   }
 
   public void setCar_chassis_number(String car_chassis_number) {
+
     this.car_chassis_number = car_chassis_number;
   }
 
-  public String getCar_color() {
+  public String getCar_color(){
     return car_color;
   }
 
