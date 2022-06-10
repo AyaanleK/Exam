@@ -11,7 +11,7 @@ Lavet af:
 ___________________________________________________________________
 
 Opsætning af java/html/css:
-1. Hent GitHub projektet fra dette link: https://github.com/Danjie3000/BilAPP.git
+1. Hent GitHub projektet fra dette link: https://github.com/AyaanleK/Exam.git
 2. Åben IntelliJ og tryk på "File". Derefter vælg "New" og tryk på "Project from version control..." og derefter indsæt linket du har kopiret fra GitHub.
 Så tryk "clone".
 
