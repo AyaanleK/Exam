@@ -6,8 +6,8 @@ Database til Bil Abonnement.
 
 Lavet af:
 - Dannie Kattrup. GitHub: http://github.com/Danjie3000
-- Mikkel Nielsen. GitHub:
-- Ayaanle Hassan. GitHub:
+- Mikkel Nielsen. GitHub: https://github.com/AyaanleK
+- Ayaanle Hassan. GitHub: https://github.com/MikkelNielsen0
 ___________________________________________________________________
 
 Opsætning af java/html/css:
